@@ -1,15 +1,15 @@
-# mention-bot [![Build Status](https://travis-ci.org/facebook/mention-bot.svg?branch=master)](https://travis-ci.org/facebook/mention-bot)
+# mention-bot [![Build Status](https://travis-ci.org/deis/mention-bot.svg?branch=master)](https://travis-ci.org/deis/mention-bot)
 
 Do you have a GitHub project that is too big for people to subscribe to all the notifications? The mention bot will automatically mention potential reviewers on pull requests. It helps getting faster turnaround on pull requests by involving the right people early on.
 
-<img width="769" src="https://cloud.githubusercontent.com/assets/197597/11023035/a2f8733e-8622-11e5-84df-49a3d9425938.png">
+<img width="769" src="https://cloud.githubusercontent.com/assets/73019/15983155/77d11520-2f5b-11e6-80cc-294c7dd4212d.png">
 
 ## How To Use?
 
 - Go to
  - your project on GitHub > Settings > Webhooks & services > Add Webhook or
  - your organization on GitHub > Settings > Webhooks > Add Webhook
-- Payload URL: (https://mention-bot.herokuapp.com/)
+- Payload URL: (http://mention-bot.champagne.deis.com/)
 - Content type: `application/json`
 - Secret: Leave blank
 - Let me select individual events > Check `Pull Request`

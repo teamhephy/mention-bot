@@ -79,13 +79,13 @@ function buildMentionSentence(reviewers) {
 
 function defaultMessageGenerator(reviewers, pullRequester) {
   return util.format(
-    '%s, thanks for your PR! ' +
-    'By analyzing the history of the files in this pull request' +
-    ', we identified %s to be%s potential reviewer%s.',
-    pullRequester,
+    '%s %s potential reviewer%s of this pull request ' +
+    'based on my analysis of `git blame` information. ' +
+    'Thanks %s!',
     buildMentionSentence(reviewers),
-    reviewers.length > 1 ? '' : ' a',
-    reviewers.length > 1 ? 's' : ''
+    reviewers.length > 1 ? 'are' : 'is a',
+    reviewers.length > 1 ? 's' : '',
+    pullRequester
   );
 }
 
@@ -441,7 +441,7 @@ app.post('/', function(req, res) {
 app.get('/', function(req, res) {
   res.send(
     'GitHub Mention Bot Active. ' +
-    'Go to https://github.com/facebook/mention-bot for more information.'
+    'Go to https://github.com/deis/mention-bot for more information.'
   );
 });
 
